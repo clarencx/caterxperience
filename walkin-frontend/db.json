@@ -1,0 +1,6 @@
+{
+  "bookings": [
+    { "id": 1, "name": "John Doe", "date": "2025-07-04", "guests": 4 },
+    { "id": 2, "name": "Jane Smith", "date": "2025-07-05", "guests": 2 }
+  ]
+}

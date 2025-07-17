@@ -1,0 +1,460 @@
+html, body, #root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Arial, system-ui, sans-serif;
+  font-size: 15px;
+}
+
+.app-flex-container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+
+.header-bar {
+  background: #fff176;
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  padding: 12px 0 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 40px;
+}
+.header-username {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #222 !important;
+  font-family: 'Lora', Georgia, Times, serif !important;
+  letter-spacing: 0.01em !important;
+}   
+.header-user svg {
+  font-size: 20px !important;
+}
+.menu-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 16px 24px 16px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 0.6rem;
+  margin-top: 12px;
+}
+.menu-box > div[style*="display: flex"] {
+  justify-content: flex-start;
+  margin-bottom: 0 !important;
+}
+
+.menu-box h3 {
+  font-size: 1rem;
+}
+
+.menu-box .menu-card,
+.menu-box > div[style*="background: #fff"] {
+  padding: 6px !important;
+  min-width: 110px !important;
+}
+
+.menu-box ul {
+  font-size: 0.6rem;
+}
+
+.menu-box span,
+.menu-box b {
+  font-size: 0.65em;
+}
+
+.menu-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: -8px;
+  margin-top: -10px;
+  flex-wrap: wrap;
+}
+.menu-title {
+  font-weight: 700;
+  font-size: 2rem !important;
+  color: #222;
+  font-family: 'Lora', Georgia, Times, serif;
+  margin-right: 18px;
+  margin-top: -4px;
+}
+.menu-search-wrapper {
+  position: relative;
+  width: 250px;
+  flex: 0 0 250px;
+  margin-right: auto;
+}
+.menu-search-input {
+  font-size: 0.9rem;
+  padding: 8px 32px 8px 12px;
+  width: 100% !important;
+  min-width: 0 !important;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.menu-search-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.edit-btn, .add-menu-btn {
+  background: #fff176;
+  border: none;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  font-family: 'Lora', Georgia, Times, serif;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+  justify-content: center;
+}
+.edit-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.add-menu-btn {
+  white-space: nowrap;
+  padding: 10px 28px;
+  min-width: 170px;
+}
+.menu-categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.menu-category-block {
+  width: 100%;
+}
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #222;
+  font-family: 'Lora', Georgia, Times, serif;
+  margin-top: 0;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+.menu-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 2.2rem;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+.menu-card {
+  width: min(170px, 35vw);
+  height: 180px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.2s;
+  border: 1.5px solid #ececec;
+  flex: 0 0 170px;
+  max-width: 170px;
+  min-width: 120px;
+}
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 100%;
+  cursor: pointer;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+.upload-plus {
+  font-size: 32px;
+  color: #bbb;
+}
+.upload-text {
+  font-size: 14px;
+  color: #bbb;
+}
+.menu-card-footer {
+  background: #fff176;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 12px 0;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  font-family: 'Lora', Georgia, Times, serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+
+#root {
+
+  padding: 0;
+  text-align: left;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.sidebar {
+  font-family: 'Lora', Georgia, Times, serif;
+  font-size: 1rem;
+}
+.sidebar nav ul li {
+  font-weight: bold;
+}
+.section-header {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #b0a97f;
+  letter-spacing: 0.08em;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-left: 240px;
+  padding-left: 16px;
+}
+
+.content-container {
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+body, .main-content, #root {
+  color: #222 !important;
+  background: #fff !important;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222 !important;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #222 !important;
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 80px !important;
+    min-width: 60px !important;
+    padding: 0 !important;
+  }
+  .logo-sidebar {
+    width: 40px !important;
+    margin: 10px auto !important;
+  }
+  main {
+    padding: 0 !important;
+  }
+  .menu-grid {
+    gap: 1rem !important;
+  }
+  .main-content {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 60px !important;
+    min-width: 40px !important;
+    padding: 0 !important;
+  }
+  .logo-sidebar {
+    width: 30px !important;
+    margin: 8px auto !important;
+  }
+  .menu-grid {
+    gap: 0.5rem !important;
+  }
+  .menu-card {
+    min-width: 140px !important;
+    max-width: 180px !important;
+    height: 180px !important;
+  }
+  .main-content {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 0;
+  }
+  .sidebar {
+    display: none !important;
+  }
+  main {
+    width: 100vw !important;
+    padding: 0 !important;
+  }
+  .menu-grid {
+    gap: 0.3rem !important;
+    padding-left: 0 !important;
+  }
+  .menu-card {
+    min-width: 120px !important;
+    max-width: 140px !important;
+    height: 140px !important;
+    font-size: 14px !important;
+  }
+  .category-title {
+    font-size: 1.1rem !important;
+    margin-left: 1vw !important;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.package-card-content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.package-prices, .package-inclusions {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 0.92rem;
+  color: #222;
+  word-break: break-word;
+}
+.package-inclusions ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.92rem;
+}
+.menu-box h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.menu-box > div[style*='Event Add-Ons'] .menu-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.menu-box > div[style*='Event Add-Ons'] {
+  font-size: 1.05rem;
+}
+.addon-card {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.addon-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.addon-card .addon-price,
+.addon-card .addon-qty,
+.addon-card .addon-desc {
+  font-size: 1.5rem;
+}
+.small-text-card .package-prices,
+.small-text-card .package-inclusions,
+.small-text-card .package-inclusions ul {
+  font-size: 0.85rem;
+}
+.package-prices > b,
+.package-inclusions > b {
+  font-size: 1.05rem;
+}

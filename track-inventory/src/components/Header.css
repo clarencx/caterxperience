@@ -1,0 +1,28 @@
+.header-bar {
+  width: 100%;
+  background: #fff176;
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  padding: 12px 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-right: 40px;
+}
+.header-username {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+  font-family: 'Lora', Georgia, Times, serif;
+  letter-spacing: 0.01em;
+}
+.header-user svg {
+  font-size: 1.5rem;
+} 

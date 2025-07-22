@@ -1,0 +1,267 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 240px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.payment-box {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  height: calc(100vh - 40px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-bar {
+  background: #fff176;
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  padding: 12px 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.header-username {
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+  font-family: 'Lora', Georgia, Times, serif;
+}
+
+.payment-title-section {
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.payment-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  font-family: "Lora", Georgia, Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.payment-controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.payment-right-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-search-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.payment-search-input {
+  width: 100%;
+  padding: 12px 20px 12px 45px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  outline: none;
+  font-family: "Lora", Georgia, Times, serif;
+  color: #666;
+  box-sizing: border-box;
+}
+
+.payment-search-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.payment-search-input:focus {
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+.payment-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.filter-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  min-width: 36px;
+  height: 36px;
+}
+
+.filter-btn:hover {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.generate-report-btn {
+  background: #fff176;
+  border: black 1px solid;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  font-family: "Lora", Georgia, Times, serif;
+  color: #222;
+  transition: all 0.2s ease;
+}
+
+.generate-report-btn:hover {
+  background: #ffeb3b;
+}
+
+.payment-table-container {
+  width: 100%;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0;
+  flex: 1;
+  margin-top: 15px;
+}
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Lora", Georgia, Times, serif;
+  table-layout: auto;
+}
+
+.payment-table th {
+  text-align: left;
+  padding: 15px 16px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  color: #333;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+
+
+.payment-table td {
+  padding: 15px 16px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-size: 14px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  min-width: 80px;
+}
+
+.status-badge.pending {
+  background-color: #FFF9C4;
+  color: #222;
+  border-radius: 8px;
+}
+
+.status-badge.paid {
+  background-color: #C8E6C9;
+  color: #222;
+  border-radius: 8px;
+}
+
+.print-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #222;
+  font-size: 18px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .payment-controls-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .payment-search-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .payment-search-wrapper {
+    width: 100%;
+  }
+
+  .payment-table-container {
+    height: calc(100vh - 180px);
+  }
+}

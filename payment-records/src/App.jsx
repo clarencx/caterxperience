@@ -3,11 +3,12 @@ import Sidebar from "./components/Sidebar";
 import "./App.css";
 import { FaBell, FaPrint, FaFilter } from "react-icons/fa";
 import searchIcon from "./assets/Search.png";
+import logo from "./assets/logo.png";
 
 const initialPaymentData = [
   {
     paymentNo: "R-18347",
-    clientName: "Scott Dawson",
+    clientName: "Ayn Alwyn",
     eventName: "Scott's 30th Birth...",
     amountPaid: "20,000.00",
     paymentStatus: "Pending"
@@ -37,6 +38,18 @@ const initialPaymentData = [
 
 function App() {
   const [paymentData, setPaymentData] = React.useState(initialPaymentData);
+  const [showInvoiceModal, setShowInvoiceModal] = React.useState(false);
+  const [selectedPayment, setSelectedPayment] = React.useState(null);
+
+  const handlePrintClick = (payment) => {
+    setSelectedPayment(payment);
+    setShowInvoiceModal(true);
+  };
+
+  const closeModal = () => {
+    setShowInvoiceModal(false);
+    setSelectedPayment(null);
+  };
 
   return (
     <div style={{ display: "flex", minHeight: "100vh", fontFamily: "Lora, Georgia, Times, serif", background: "#f4f4f4", width: "100%", overflowX: "hidden" }}>
@@ -97,7 +110,7 @@ function App() {
                       </span>
                     </td>
                     <td>
-                      <button className="print-btn">
+                      <button className="print-btn" onClick={() => handlePrintClick(payment)}>
                         <FaPrint />
                       </button>
                     </td>
@@ -108,6 +121,66 @@ function App() {
           </div>
         </div>
       </main>
+      
+      {/* Invoice Modal */}
+      {showInvoiceModal && selectedPayment && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="invoice-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close-btn" onClick={closeModal}>×</button>
+            
+            <div className="invoice-header">
+              <img src={logo} alt="Ollinati Catering" className="company-logo" />
+              <div className="company-contact">
+                <div>📞 0919-3745-162 / 0933-3960-877</div>
+                <div>📍 Ron Pavillion Bunsuran 1st Pandi, Bulacan</div>
+              </div>
+            </div>
+            
+            <div className="invoice-details">
+              <div className="invoice-row">
+                <span>Invoice No.: {selectedPayment.paymentNo.replace('R-', '')}</span>
+                <span className="invoice-divider">|</span>
+                <span>Date: 05/01/2025</span>
+              </div>
+              <div className="customer-row">
+                Customer: {selectedPayment.clientName}
+              </div>
+            </div>
+            
+            <div className="invoice-table">
+              <div className="invoice-table-header">
+                <span>Description</span>
+                <span>Price</span>
+              </div>
+              <div className="invoice-table-row">
+                <span>Reservation Fee</span>
+                <span>{selectedPayment.amountPaid}</span>
+              </div>
+            </div>
+            
+            <div className="invoice-total">
+              <div className="total-row">
+                <span className="total-label">Total</span>
+                <span className="total-amount">{selectedPayment.amountPaid}</span>
+              </div>
+              <div className="payment-details">
+                <div className="payment-row">
+                  <span>Cash</span>
+                  <span>{selectedPayment.amountPaid}</span>
+                </div>
+                <div className="payment-row">
+                  <span>Change</span>
+                  <span>0.00</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="thank-you">
+              ***** THANK YOU *****
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

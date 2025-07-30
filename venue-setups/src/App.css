@@ -1,0 +1,293 @@
+html, body, #root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Arial, system-ui, sans-serif;
+  font-size: 15px;
+}
+
+.app {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 240px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.header-bar {
+  background: #fff176;
+  border-radius: 8px;
+  margin: 0 0 18px 0;
+  padding: 12px 0 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.header-username {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #222 !important;
+  font-family: 'Lora', Georgia, Times, serif !important;
+  letter-spacing: 0.01em !important;
+}
+
+.menu-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 16px 24px 24px 24px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.menu-title {
+  font-weight: 700;
+  font-size: 2rem !important;
+  color: #222;
+  font-family: 'Lora', Georgia, Times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-search-wrapper {
+  position: relative;
+  width: 250px;
+  flex: 0 0 250px;
+  margin-right: auto;
+}
+
+.menu-search-input {
+  font-size: 0.9rem;
+  padding: 8px 32px 8px 12px;
+  width: 100% !important;
+  min-width: 0 !important;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, system-ui, sans-serif;
+}
+
+.menu-search-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.menu-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.edit-btn, .add-menu-btn {
+  background: #fff176;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  font-family: 'Lora', Georgia, Times, serif;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover, .add-menu-btn:hover {
+  background: #ffec3d;
+}
+
+.edit-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.add-menu-btn {
+  min-width: 150px;
+  padding: 10px 20px;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.venue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: flex-start;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.venue-card {
+  background: #fef9e7;
+  border: 1px solid #fff176;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  position: relative;
+}
+
+.venue-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.venue-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.venue-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.venue-field {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.field-label {
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.field-value {
+  color: #333;
+  font-size: 14px;
+  flex: 1;
+  font-weight: 500;
+}
+
+.status-badge {
+  background: #fff176;
+  color: #222;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+}
+
+.venue-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.edit-2d-btn {
+  background: #fff176;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  font-family: 'Lora', Georgia, Times, serif;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 200px;
+}
+
+.edit-2d-btn:hover {
+  background: #ffec3d;
+}
+
+.status-badge.paid {
+  background-color: #f6ffed;
+  border: 1px solid #b7eb8f;
+  color: #52c41a;
+}
+
+.status-badge.pending {
+  background-color: #fffbe6;
+  border: 1px solid #ffe58f;
+  color: #faad14;
+}
+
+.print-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.print-btn:hover {
+  color: #1890ff;
+  background: #e6f7ff;
+}

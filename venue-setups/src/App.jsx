@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
+import { useNavigate } from 'react-router-dom'
 import "./App.css";
 import { FaBell, FaFilter } from 'react-icons/fa';
 import searchIcon from '../assets/Search.png';
 
 function App() {
+const navigate = useNavigate();
+
   return (
     <>
     <div className="app">
@@ -55,7 +58,7 @@ function App() {
                 <b>Theme:</b> Garden Fairy Theme
               </div>
               <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+                <button onClick={() => navigate('/edit2DSetup')} style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>
@@ -79,8 +82,8 @@ function App() {
               <div style={{ marginBottom: 8, fontSize: '15px' }}>
                 <b>Theme:</b> Garden Fairy Theme
               </div>
-              <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+              <div onClick={() => navigate('/edit2DSetup')} style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
+                <button  style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>
@@ -105,7 +108,7 @@ function App() {
                 <b>Theme:</b> Garden Fairy Theme
               </div>
               <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+                <button onClick={() => navigate('/edit2DSetup')} style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>
@@ -130,7 +133,7 @@ function App() {
                 <b>Theme:</b> Garden Fairy Theme
               </div>
               <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+                <button onClick={() => navigate('/edit2DSetup')} style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>
@@ -155,7 +158,7 @@ function App() {
                 <b>Theme:</b> Garden Fairy Theme
               </div>
               <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+                <button onClick={() => navigate('/edit2DSetup')} style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>
@@ -180,7 +183,7 @@ function App() {
                 <b>Theme:</b> Garden Fairy Theme
               </div>
               <div style={{ marginBottom: 8, fontSize: '15px', textAlign: 'center' }}>
-                <button style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
+                <button onClick={() => navigate('/edit2DSetup')}  style={{ background: '#fff176', border: 'none', padding: '8px 16px', borderRadius: 6, fontWeight: 'bold', cursor: 'pointer', fontSize: '12px' }}>
                   Edit 2D Design
                 </button>
               </div>

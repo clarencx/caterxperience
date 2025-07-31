@@ -6,9 +6,10 @@ import searchIcon from '../assets/Search.png';
 
 function App() {
   return (
+    <>
     <div className="app">
       <Sidebar />
-      <main className="main-content">
+      <main className="main-content" style={{width: '55%'}}>
         <div className="menu-box">
           <div className="header-bar">
             <div></div>
@@ -18,10 +19,9 @@ function App() {
             </div>
           </div>
           <div className="menu-section-header">
-            <span className="menu-title" style={{ fontSize: '2rem' }}>Venue Designs</span>
+            <span className="menu-title" style={{ fontSize: '2rem'}}>Venue Designs</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18 }}>
-            <div></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 15 }}>
               <FaFilter style={{ fontSize: '16px', color: '#222' }} />
               <div className="menu-search-wrapper">
@@ -34,8 +34,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 64, marginBottom: 12, maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '700px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 64, width: '100%', marginBottom: 12, margin: '0 auto'}}>
+          <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '700px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ marginBottom: 8, fontSize: '15px' }}>
                 <b>Client:</b> Daphne Alwyn
               </div>
@@ -85,7 +85,7 @@ function App() {
                 </button>
               </div>
             </div>
-            <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '520px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '590px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)'}}>
               <div style={{ marginBottom: 8, fontSize: '15px' }}>
                 <b>Client:</b> Daphne Alwyn
               </div>
@@ -135,7 +135,7 @@ function App() {
                 </button>
               </div>
             </div>
-            <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '520px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
+            <div style={{ background: '#fff', border: '4px solid #fff176', borderRadius: 10, padding: 16, width: '100%', maxWidth: '590px', height: 250, boxShadow: '0 2px 8px rgba(0,0,0,0.04)' }}>
               <div style={{ marginBottom: 8, fontSize: '15px' }}>
                 <b>Client:</b> Daphne Alwyn
               </div>
@@ -189,6 +189,7 @@ function App() {
         </div>
       </main>
     </div>
+    </>
   );
 }
 

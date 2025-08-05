@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom' // Added more imports if needed
 import './index.css'
 import App from './App.jsx'
+import Edit2DSetup from './components/Edit2DSetup.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -10,7 +11,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         {/* Add more routes here if needed */}
-        <Route path="/edit2DSetup" element={<edit2DSetup />} />
+        <Route path="/edit2DSetup" element={<Edit2DSetup />} />
         {/* Example route for edit2DSetup, adjust as necessary */}
       </Routes>
     </BrowserRouter>

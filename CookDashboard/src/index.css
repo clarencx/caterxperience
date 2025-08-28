@@ -1,0 +1,13 @@
+html, body, #root {
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', Arial, system-ui, sans-serif;
+  font-size: 15px;
+}
+
+* { box-sizing: inherit; }
+

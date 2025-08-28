@@ -10,36 +10,15 @@ import './components/Header.css';
 export default function App() {
   return (
     <Router>
-      <div style={{ display: 'flex', minHeight: '100vh', width: '100vw' }}>
+      <div className="app-root">
         <Sidebar />
-        <div style={{
-          flex: 1,
-          display: 'flex',
-          flexDirection: 'column',
-          minHeight: '100vh',
-          width: '100%'
-        }}>
-          <div style={{
-            width: '100%',
-            padding: '0 8px'
-          }}>
-            <Header />
-          </div>
-          <main style={{
-            flex: 1,
-            width: '100%',
-            background: '#ededed',
-            padding: '32px 8px 24px 8px',
-            minHeight: '100vh',
-            boxSizing: 'border-box',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px'
-          }}>
+        <div className="main-area">
+          <Header />
+          <div className="content-area">
             <Routes>
               <Route path="/" element={<Inventory />} />
             </Routes>
-          </main>
+          </div>
         </div>
       </div>
     </Router>

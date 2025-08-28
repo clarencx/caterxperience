@@ -1,0 +1,47 @@
+.menu-page .header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; gap: 12px; flex-wrap: nowrap; }
+.menu-page .controls { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+.menu-page .search { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 6px 10px; }
+.menu-page .search input { border: none; outline: none; font-size: 14px; width: 280px; max-width: 40vw; }
+.menu-page .add-btn { background: #fff176; border: none; padding: 8px 12px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+.menu-section { margin-bottom: 16px; }
+.menu-title { font-weight: 700; margin-bottom: 8px; }
+.menu-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.menu-card { background: #fff; border: 1px solid #eee; border-top: 4px solid #fff176; border-radius: 12px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.app { display: flex; width: 100vw; min-height: 100vh; background: #f4f4f4; }
+.main-content { flex: 1; padding: 20px; margin-left: 240px; background: #f4f4f4; height: 100vh; overflow-y: auto; }
+.header-bar { background: #fff176; border-radius: 8px; margin: 0 0 18px 0; padding: 14px 24px; display: flex; align-items: center; justify-content: flex-end; min-height: 56px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);} 
+.header-user { display: flex; align-items: center; gap: 14px; }
+.header-username { font-family: 'Lora', Georgia, Times, serif; font-weight: 700; font-size: 16px; color: #222; letter-spacing: 0.01em; }
+.date-row { text-align: right; margin: 8px 4px 16px 0; color: #333; font-weight: 700; }
+.menu-box { padding: 0; }
+
+/* Dashboard content */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 18px; }
+.kpi-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; border: 1px solid #eee; }
+.kpi-left { display: flex; flex-direction: column; gap: 6px; }
+.kpi-card .label { font-weight: 700; color: #1f1f1f; }
+.kpi-card .num { font-weight: 800; font-size: 24px; }
+.kpi-icon { width: 32px; height: 32px; object-fit: contain; margin-left: 16px; }
+
+.content-grid { display: grid; grid-template-columns: 1fr 300px; gap: 24px; }
+.table-card { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1px solid #eee; padding: 0 0 8px 0; }
+.table-title { font-family: 'Lora', Georgia, Times, serif; font-weight: 700; padding: 14px 20px; }
+.table { width: 100%; border-collapse: collapse; }
+.table th { text-align: left; padding: 12px 16px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.table td { padding: 14px 16px; border-bottom: 1px solid #eee; vertical-align: top; }
+
+.right-panel { background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1px solid #eee; padding: 16px; }
+.right-title { font-family: 'Lora', Georgia, Times, serif; font-weight: 700; margin-bottom: 6px; }
+.right-line { border: 0; border-top: 1px solid #e8e8e8; margin: 8px 0; }
+
+/* Bookings page */
+.bookings .header-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.bookings .actions { display: flex; align-items: center; gap: 10px; }
+.bookings .search { display: flex; align-items: center; gap: 8px; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 6px 10px; }
+.bookings .search input { border: none; outline: none; font-size: 14px; width: 260px; }
+.bookings .filter { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 8px 10px; }
+.bookings .table-card { padding-top: 8px; }
+.bookings .table th { border-top: none; border-bottom: 1px solid #eee; }
+.bookings .table td { border-bottom: 1px solid #eee; }
+.more-btn { width: 36px; height: 36px; border-radius: 50%; background: #000; color: #fff; border: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.more-btn span { display: block; font-size: 16px; letter-spacing: 4px; line-height: 0; margin-top: 1px; }

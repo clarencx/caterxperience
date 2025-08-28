@@ -1,5 +1,4 @@
 .header-bar {
-  width: 100%;
   background: #fff176;
   border-radius: 8px;
   margin: 0 0 18px 0;
@@ -12,7 +11,7 @@
 }
 .header-user {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 18px;
   margin-right: 40px;
 }

@@ -40,3 +40,50 @@
 .read-the-docs {
   color: #888;
 }
+
+.app-root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.main-area {
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: calc(100vw - 240px);
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  overflow: hidden;
+  background: #ededed;
+  padding: 0 16px;
+}
+
+.inventory-table-wrapper {
+  flex: 1 1 0;
+  overflow: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-top: 8px;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}

@@ -14,16 +14,16 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
-  justify-self: start;
-  margin-right: 2rem;
+
 }
 
 .nav-logo img {
@@ -34,8 +34,8 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  justify-self: center;
+  gap: 3rem;
+  margin: 0 auto;
 }
 
 .nav-link {
@@ -44,7 +44,7 @@
   font-weight: 700;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
-  font-size: 18px;
+  font-size: 15px;
   font-family: Arial, sans-serif;
 }
 
@@ -68,10 +68,9 @@
   transition: all 0.3s ease;
   font-weight: 700;
   font-family: Arial, sans-serif;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  justify-self: end;
+  display: flex;
+  justify-content: center;
+  min-width: fit-content;
 }
 
 .login-btn:hover {

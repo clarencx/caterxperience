@@ -13,7 +13,7 @@
 .menu-category-block .category-title { font-size: 1.2rem; }
 .category-count { font-weight: 400; color: #666; font-size: 0.9rem; }
 .menu-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
-.menu-card { background: #fff; border: 1px solid #e4e4e4; border-radius: 12px; height: 140px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 14px -8px rgba(0,0,0,0.25); }
+.menu-card { background: #fff; border: 3px solid #fff176; border-bottom: none; border-left: none; border-right: none; border-radius: 12px; height: 140px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 14px -8px rgba(0,0,0,0.25); }
 .archive-overlay { display: none; }
 .menu-card-content { padding: 0 12px; display: flex; align-items: center; justify-content: center; }
 .menu-name { font-weight: 700; text-align: center; }

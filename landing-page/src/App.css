@@ -24,23 +24,35 @@ body {
   margin-top: 80px;
 }
 
+/* Home-only yellow background */
+.home-root {
+  background-color: #FFFBC5;
+}
+
 .hero-section {
   position: relative;
   height: 500px;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect width="1200" height="500" fill="%23f4a460"/><circle cx="200" cy="100" r="50" fill="%23deb887"/><circle cx="1000" cy="150" r="80" fill="%23d2b48c"/></svg>');
+  background-image: url('/src/assets/pavilion.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  /* full-bleed - remove side gutters */
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
 }
 
 .hero-overlay {
-  background: rgba(31, 31, 31, 0.8);
+  background: none;
   padding: 3rem;
-  border-radius: 10px;
-  text-align: center;
+  text-align: left;
   color: white;
+  position: relative;
+  z-index: 2;
+  margin-left: 2rem;
 }
 
 .hero-content h1 {
@@ -54,7 +66,7 @@ body {
 .event-search {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -100,7 +112,7 @@ body {
 
 .venue-section h2 {
   font-family: 'Lora', Georgia, Times, serif;
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #1f1f1f;
@@ -150,9 +162,11 @@ body {
 
 /* Menu Section */
 .menu-section {
-  background: #f4f4f4;
+  background: transparent;
   padding: 4rem 2rem;
   margin: 2rem;
+  border: none;
+  box-shadow: none;
 }
 
 .menu-content {
@@ -204,18 +218,28 @@ body {
 }
 
 .food-icon {
-  font-size: 8rem;
-  opacity: 0.8;
+  width: 20rem;
+  height: 20rem;
+  background-image: url('/src/assets/menu_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Package Section */
 .package-section {
   background: #fff;
-  padding: 4rem 2rem;
-  margin: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  border: 1px solid #eee;
+  padding: 4rem 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  /* Force full-bleed section (no yellow gutters) */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
 }
 
 .package-content {
@@ -234,8 +258,12 @@ body {
 }
 
 .gift-icon {
-  font-size: 8rem;
-  opacity: 0.8;
+  width: 20rem;
+  height: 20rem;
+  background-image: url('/src/assets/package_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .package-text h2 {
@@ -273,12 +301,11 @@ body {
 
 /* Footer Section */
 .footer-section {
-  background: #fffbe6;
+  background: #FFFBC5;
   padding: 3rem 2rem 2rem 2rem;
-  margin: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  border: 1px solid #eee;
+  margin: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .footer-content {
@@ -324,17 +351,18 @@ body {
 }
 
 .footer-logo-text {
-  font-family: 'Lora', Georgia, Times, serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff176;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 40rem;
+  height: 30rem;
+  background-image: url('/src/assets/ollinati_logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .copyright {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid #e8e8e8;
+  border-top: none;
   color: #666;
   font-size: 1rem;
 }
@@ -401,7 +429,5 @@ body {
     font-size: 2rem;
   }
   
-  .footer-logo-text {
-    font-size: 1.5rem;
-  }
+  .footer-logo-text { height: 18rem; width: 26rem; }
 }

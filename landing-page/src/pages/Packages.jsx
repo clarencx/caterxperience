@@ -74,6 +74,7 @@ export default function Packages() {
   ];
 
   return (
+    <>
     <div className="page-container packages-page menu-white">
       <div className="main-content">
         <section className="page-header">
@@ -161,6 +162,41 @@ export default function Packages() {
         </section>
       </div>
     </div>
+      {/* Footer Section */}
+      <footer className="footer-section">
+        <div className="footer-content">
+          <div className="footer-info">
+            <h2>Walk-In Bookings Only!</h2>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-icon">
+                  <img src="/src/assets/Facebook.png" alt="Facebook" style={{width: '1.5rem', height: '1.5rem'}} />
+                </span>
+                <span>Ron Pavilion - Home of Ollinati Catering</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">
+                  <img src="/src/assets/Phone.png" alt="Phone" style={{width: '1.5rem', height: '1.5rem'}} />
+                </span>
+                <span>093328239434</span>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">
+                  <img src="/src/assets/Location.png" alt="Location" style={{width: '1.5rem', height: '1.5rem'}} />
+                </span>
+                <span>Bunsuran 1st 3014 Pandi, Philippines</span>
+              </div>
+            </div>
+          </div>
+          <div className="footer-logo">
+            <div className="footer-logo-text"></div>
+          </div>
+        </div>
+        <div className="copyright">
+          Copyright © 2025. All Rights Reserved | CatXperience
+        </div>
+      </footer>
+    </>
   );
 }
 

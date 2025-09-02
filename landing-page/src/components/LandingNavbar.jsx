@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './LandingNavbar.css';
 
 const LandingNavbar = () => {
@@ -10,9 +10,9 @@ const LandingNavbar = () => {
           <img src="/src/assets/logo.png" alt="Ollinati Catering" />
         </div>
         <div className="nav-links">
-          <Link to="/" className="nav-link active">Home</Link>
-          <Link to="/menu" className="nav-link">Menu</Link>
-          <Link to="/packages" className="nav-link">Packages</Link>
+          <NavLink to="/" end className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Home</NavLink>
+          <NavLink to="/menu" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Menu</NavLink>
+          <NavLink to="/packages" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Packages</NavLink>
         </div>
         <Link to="/login" className="nav-link login-btn">Login</Link>
       </div>

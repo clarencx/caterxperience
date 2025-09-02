@@ -1,0 +1,21 @@
+.packages-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 1.5rem; padding: 0 24px 10px; box-sizing: border-box; scrollbar-width: thin; background: transparent; }
+.category-title { font-size: 1.1rem; font-weight: 700; margin: 0 24px 0.6rem; color: #222; font-family: 'Lora', Georgia, Times, serif; text-align: left; }
+.other-title { margin-top: 1.5rem; }
+.theme-card { width: 20rem; min-height: 120px; border-radius: 12px; border: 3px solid #fff176; background-color: #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display: flex; align-items: center; justify-content: center; padding: 16px; }
+.theme-title { font-size: 1rem; font-weight: 700; text-align: center; font-family: 'Lora', Georgia, serif; }
+.package-card-content { display: flex; flex-direction: column; gap: 10px; }
+.package-prices, .package-inclusions { font-size: 0.85rem; line-height: 1.4; color: #333; }
+.package-inclusions ul { padding-left: 18px; margin: 0; }
+.package-inclusions ul li { margin-bottom: 4px; }
+.addon-card { width: 15rem !important; }
+.addon-card h3 { font-size: 1rem; font-weight: 700; margin: 0 0 4px; }
+.card-yellow, .theme-card, .addon-card { position: relative; }
+.small-text-card .package-prices, .small-text-card .package-inclusions, .small-text-card .package-inclusions ul { font-size: 0.9rem; }
+.package-prices > b, .package-inclusions > b { font-size: 0.9rem; }
+.card-yellow { width: 20rem; height: auto; flex: 0 0 auto; padding: 20px; border-radius: 12px; border: 3px solid #fff176; box-shadow: 0 2px 6px rgba(0,0,0,0.05); background: #fff; display: flex; flex-direction: column; gap: 8px; }
+/* bigger page title */
+.packages-page .packages-title { font-size: 2rem; }
+.card-title { font-weight: 700; font-size: 1rem; margin: 0; }
+.price-red { color: rgb(192, 0, 0); font-weight: 600; font-size: 0.9rem; }
+.addon-details { margin: 10px 0; font-size: 0.9rem; color: #333; }
+

@@ -39,7 +39,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  /* full-bleed - remove side gutters */
   left: 50%;
   margin-left: -50vw;
   width: 100vw;
@@ -233,7 +232,6 @@ body {
   margin: 0;
   border: none;
   box-shadow: none;
-  /* Force full-bleed section (no yellow gutters) */
   position: relative;
   left: 50%;
   right: 50%;
@@ -315,7 +313,6 @@ body {
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
   align-items: center;
-  margin-bottom: 2rem;
 }
 
 .footer-info h2 {
@@ -364,7 +361,7 @@ body {
   padding-top: 2rem;
   border-top: none;
   color: #666;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 /* Responsive Design */

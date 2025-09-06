@@ -68,9 +68,9 @@ export default function Packages() {
   ];
 
   const placeholderAddons = [
-    { addon_id: 'a1', addon_name: 'Tisoy’s Ice Cream', addon_description: '', prices: [ { description: '3 Gallons (1 Flavor, 100 cups)', price: 3000 } ] },
+    { addon_id: 'a1', addon_name: 'Tisoy\'s Ice Cream', addon_description: '', prices: [ { description: '3 Gallons (1 Flavor, 100 cups)', price: 3000 } ] },
     { addon_id: 'a2', addon_name: 'Heart Cafe - Soda Pop', addon_description: '', prices: [ { description: '3 Gallons (1 Flavor, 100 cups)', price: 3000 } ] },
-    { addon_id: 'a3', addon_name: 'Kiel’s Foodcart', addon_description: '', prices: [ { description: '3 Gallons (1 Flavor, 100 cups)', price: 3000 } ] },
+    { addon_id: 'a3', addon_name: 'Kiel\'s Foodcart', addon_description: '', prices: [ { description: '3 Gallons (1 Flavor, 100 cups)', price: 3000 } ] },
   ];
 
   return (
@@ -162,42 +162,6 @@ export default function Packages() {
         </section>
       </div>
     </div>
-      {/* Footer Section */}
-      <footer className="footer-section">
-        <div className="footer-content">
-          <div className="footer-info">
-            <h2>Walk-In Bookings Only!</h2>
-            <div className="contact-info">
-              <div className="contact-item">
-                <span className="contact-icon">
-                  <img src="/src/assets/Facebook.png" alt="Facebook" style={{width: '1.5rem', height: '1.5rem'}} />
-                </span>
-                <span>Ron Pavilion - Home of Ollinati Catering</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">
-                  <img src="/src/assets/Phone.png" alt="Phone" style={{width: '1.5rem', height: '1.5rem'}} />
-                </span>
-                <span>093328239434</span>
-              </div>
-              <div className="contact-item">
-                <span className="contact-icon">
-                  <img src="/src/assets/Location.png" alt="Location" style={{width: '1.5rem', height: '1.5rem'}} />
-                </span>
-                <span>Bunsuran 1st 3014 Pandi, Philippines</span>
-              </div>
-            </div>
-          </div>
-          <div className="footer-logo">
-            <div className="footer-logo-text"></div>
-          </div>
-        </div>
-        <div className="copyright">
-          Copyright © 2025. All Rights Reserved | CatXperience
-        </div>
-      </footer>
     </>
   );
 }
-
-
